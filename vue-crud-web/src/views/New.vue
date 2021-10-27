@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <h1>New</h1>
-        <task-form @createOrUpdate="createOrUpdate"></task-form>
-    </div>
+  <div>
+    <h1>New</h1>
+    <task-form @createOrUpdate="createOrUpdate"></task-form>
+  </div>
 </template>
 
 <script>
