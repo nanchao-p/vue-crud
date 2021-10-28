@@ -7,7 +7,7 @@
 
 <script>
 import taskForm from "../components/TaskForm.vue";
-import { api } from "../Helper/Helpers";
+import { api } from "../helpers/Helpers";
 
 export default {
   name: "new-task",
