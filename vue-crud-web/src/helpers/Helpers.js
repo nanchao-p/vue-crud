@@ -35,6 +35,10 @@ export const api = {
     gettask: handleError(async id => {
         const res = await axios.get(baseUrl + id);
         return res.data;
+    }),
+    updatetask: handleError(async payload => {
+        const res = await axios.put(baseUrl + payload._id, payload);
+        return res.data;
     })
     
 }

@@ -1,5 +1,5 @@
 <template>
-  <form action="#" @submit.prevent="OnSubmit">
+  <form action="#" @submit.prevent="onSubmit">
     <p v-if="errorsPresent" class="error">Please fill out both fields!</p>
     <div class="ui labeled input fluid">
       <div class="ui label"><i class="calendar plus icon"></i> Task</div>
@@ -9,7 +9,7 @@
       <div class="ui label"><i class="info circle icon"></i> Details</div>
       <input type="text" placeholder="Enter Details..." v-model="task.task2" />
     </div>
-    <button class="positive ui button">submit</button>
+    <button class="positive ui button">Submit</button>
   </form>
 </template>
 
@@ -22,20 +22,20 @@ export default {
       required: false,
       default: () => {
         return {
-          task1: "",
-          taks2: "",
+          task1: '',
+          task2: '',
         };
       },
     },
   },
   data() {
     return {
-      errorsPresent: false,
-    };
+      errorsPresent: false
+    }
   },
   methods: {
     onSubmit: function () {
-      if (this.task.task1 === "" || this.task.taks2 === "") {
+      if (this.task.task1 === '' || this.task.task2 === '') {
         this.errorsPresent = true;
       } else {
         this.$emit("createOrUpdate", this.task);
