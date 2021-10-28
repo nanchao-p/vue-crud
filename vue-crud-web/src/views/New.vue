@@ -18,7 +18,7 @@ export default {
     createOrUpdate: async function (task) {
       const res = await api.createtask(task);
       this.flash("task created", "success");
-      this.$router.push(`/task/${res._id}`);
+      this.$router.push(`/tasks/${res._id}`);
     },
   },
 };
