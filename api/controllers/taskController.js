@@ -36,6 +36,7 @@ exports.update_a_task = (req, res) => {
 }
 
 exports.delete_a_task = (req, res) => {
+    console.log('taskController : delete_a_task : req =>', req);
     task.deleteOne({ _id: req.params.taskId }, err => {
         if (err) res.send(err);
         res.json({

@@ -23,5 +23,18 @@ export const api = {
     createtask: handleError(async payload => {
         const res = await axios.post(baseUrl, payload)
         return res.data;
+    }),
+    gettasks: handleError(async () => {
+        const res = await axios.get(baseUrl);
+        return res.data;
+    }),
+    deletetask: handleError(async id => {
+        const res = await axios.delete(baseUrl + id);
+        return res.data;
+    }),
+    gettask: handleError(async id => {
+        const res = await axios.get(baseUrl + id);
+        return res.data;
     })
+    
 }
